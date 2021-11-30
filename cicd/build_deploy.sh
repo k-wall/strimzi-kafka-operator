@@ -26,7 +26,6 @@ RELEASE=${RELEASE:-false}
 TEST_STRATEGY=${TEST_STRATEGY:-"minimal"}
 CLUSTER_CLEANUP=${CLUSTER_CLEANUP:-true}
 
-# CPAAS_PIPELINE="mk-strimzi.0.23-kafka.2.8"
 MIRROR_FLAG=snapshot
 
 if [[ $1 == "nightly" ]]; then
