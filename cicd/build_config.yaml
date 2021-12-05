@@ -1,0 +1,22 @@
+cpaas:
+  host: jenkins-cpaas-rhosak.apps.cpaas-poc.r6c9.p1.openshiftapps.com
+  pipeline: mk-strimzi.0.23-kafka.2.8
+components:
+- brew: TBA
+  build_path: mk/job/kafka-2.7.0/job/container/
+  name: kafka-2.7.0
+  release: quay.io/mk-ci-cd/kafka-27:0.23.0-XXX
+  snapshot: quay.io/mk-ci-cd/kafka-27:0.23.0-snapshot
+  upstream: quay.io/strimzi/kafka:0.23.0-kafka-2.7.0
+- brew: TBA
+  build_path: mk/job/kafka-28/job/container/
+  name: kafka-2.8.1
+  release: quay.io/mk-ci-cd/kafka-28:0.23.0-XXX
+  snapshot: quay.io/mk-ci-cd/kafka-28:0.23.0-snapshot
+  upstream: quay.io/strimzi/kafka:0.23.0-kafka-2.8.1
+- brew: TBA
+  build_path: mk/job/strimzi-operator/job/container/
+  name: strimzi-operator
+  release: quay.io/mk-ci-cd/strimzi-operator:0.23.0-XXX
+  snapshot: quay.io/mk-ci-cd/strimzi-operator:0.23.0-snapshot
+  upstream: quay.io/strimzi/operator:0.23.0
