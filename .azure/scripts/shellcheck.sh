@@ -13,7 +13,9 @@ docker-images/kafka/exporter-scripts/*.sh
 docker-images/jmxtrans/*.sh
 tools/olm-bundle/*.sh"
 
+# KWDEBUG
 shellcheck --version
+echo SHELLCHECK_OPTS ${SHELLCHECK_OPTS}
 
 for SCRIPTS in $SCRIPT_DIRS; do
     shellcheck -a -P $(dirname "$SCRIPTS") -x "$SCRIPTS"
