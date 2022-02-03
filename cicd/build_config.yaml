@@ -4,7 +4,7 @@ cpaas:
 components:
 - brew: TBA
   build_path: mk/job/kafka-28-container/job/container
-  name: kafka-2.8.1
+  name: kafka-28-container
   release: quay.io/mk-ci-cd/kafka-28:0.26.0-XXX
   snapshot: quay.io/mk-ci-cd/kafka-28:0.26.0-snapshot
   upstream: quay.io/strimzi/kafka:0.26.0-kafka-2.8.1
