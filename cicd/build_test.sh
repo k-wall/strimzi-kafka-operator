@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export ST_KAFKA_VERSION=2.7.0
+export ST_KAFKA_VERSION=2.8.1
 export COMPONENTS_IMAGE_PULL_POLICY=Always
 export TEST_CLIENT_IMAGE=quay.io/strimzi/test-client:0.26.1-kafka-2.8.1
 export TEST_PRODUCER_IMAGE=quay.io/mk-ci-cd/java-kafka-producer:latest
@@ -34,6 +34,7 @@ if [ ${STRATEGY} == "minimal"  ] ;  then
                    -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
                    -Dgroups=regression \
                    -Dit.test=ListenersST#testCustomCertRouteAndTlsRollingUpdate
+  exit $?
 fi
 
 
@@ -45,6 +46,7 @@ if [ ${STRATEGY} == "acceptance"  ] ;  then
                    -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
                    -Dgroups=acceptance \
                    -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade,cruisecontrol
+  exit $?
 fi
 
 if [ ${STRATEGY} == "regression"  ] ;  then
@@ -55,6 +57,7 @@ if [ ${STRATEGY} == "regression"  ] ;  then
                    -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
                    -Dgroups=regression \
                    -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade,cruisecontrol,helm
+  exit $?
 fi
 
 
