@@ -1,6 +1,6 @@
 cpaas:
   host: jenkins-cpaas-rhosak.apps.cpaas-poc.r6c9.p1.openshiftapps.com
-  pipeline: mk-strimzi.0.26-kafka.2.8
+  pipeline: mk-strimzi.0.26-kafka.3.0
 components:
 - brew: TBA
   build_path: mk/job/kafka-28-container/job/container/
