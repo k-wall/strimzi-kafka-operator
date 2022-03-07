@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-export ST_KAFKA_VERSION=2.8.1
+export ST_KAFKA_VERSION=3.0.0
 export COMPONENTS_IMAGE_PULL_POLICY=Always
-export TEST_CLIENT_IMAGE=quay.io/strimzi/test-client:0.26.1-kafka-2.8.1
+export TEST_CLIENT_IMAGE=quay.io/strimzi/test-client:0.26.1-kafka-3.0.0
 export TEST_PRODUCER_IMAGE=quay.io/mk-ci-cd/java-kafka-producer:latest
 export TEST_CONSUMER_IMAGE=quay.io/mk-ci-cd/java-kafka-consumer:latest
 export TEST_STREAMS_IMAGE=quay.io/mk-ci-cd/java-kafka-streams:latest

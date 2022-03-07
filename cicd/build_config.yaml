@@ -9,6 +9,12 @@ components:
   snapshot: quay.io/mk-ci-cd/kafka-28:0.26.0-snapshot
   upstream: quay.io/strimzi/kafka:0.26.0-kafka-2.8.1
 - brew: TBA
+  build_path: mk/job/kafka-30-container/job/container/
+  name: kafka-30-container
+  release: quay.io/mk-ci-cd/kafka-30:0.26.0-XXX
+  snapshot: quay.io/mk-ci-cd/kafka-30:0.26.0-snapshot
+  upstream: quay.io/strimzi/kafka:0.26.0-kafka-3.0.0
+- brew: TBA
   build_path: mk/job/strimzi-operator/job/container/
   name: strimzi-operator
   release: quay.io/mk-ci-cd/strimzi-operator:0.26.0-XXX
