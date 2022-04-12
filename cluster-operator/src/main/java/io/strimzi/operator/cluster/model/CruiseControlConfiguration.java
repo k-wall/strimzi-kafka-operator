@@ -100,6 +100,9 @@ public class CruiseControlConfiguration extends AbstractConfiguration {
         config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_WEBSERVER_SECURITY_ENABLE.getValue(), Boolean.toString(CruiseControl.DEFAULT_WEBSERVER_SECURITY_ENABLED));
         config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_WEBSERVER_AUTH_CREDENTIALS_FILE.getValue(), CruiseControl.API_AUTH_CREDENTIALS_FILE);
         config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_WEBSERVER_SSL_ENABLE.getValue(), Boolean.toString(CruiseControl.DEFAULT_WEBSERVER_SSL_ENABLED));
+        config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_PARTITION_METRIC_TOPIC_NAME.getValue(), CruiseControlConfigurationParameters.DEFAULT_PARTITION_METRIC_TOPIC_NAME);
+        config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_BROKER_METRIC_TOPIC_NAME.getValue(), CruiseControlConfigurationParameters.DEFAULT_BROKER_METRIC_TOPIC_NAME);
+        config.put(CruiseControlConfigurationParameters.CRUISE_CONTROL_METRIC_REPORTER_TOPIC_NAME.getValue(), CruiseControlConfigurationParameters.DEFAULT_METRIC_REPORTER_TOPIC_NAME);
 
         CRUISE_CONTROL_DEFAULT_PROPERTIES_MAP = Collections.unmodifiableMap(config);
 
