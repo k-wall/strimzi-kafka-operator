@@ -19,7 +19,6 @@
 <!--        Managed-Kafka is including this straight from PNC.  Listed here to get the transitive dependencies-->
         <strimzi-oauth.version>0.9.0</strimzi-oauth.version>
         <kafka-quotas-plugin.version>0.2.0</kafka-quotas-plugin.version>
-        <group-authorizer.version>2.4.0</group-authorizer.version>
 
         <kafka-kubernetes-config-provider.version>0.1.1</kafka-kubernetes-config-provider.version>
         <kafka-env-var-config-provider.version>0.1.1</kafka-env-var-config-provider.version>
@@ -287,29 +286,6 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>io.bf2.kafka</groupId>
-            <artifactId>group-authorizer</artifactId>
-            <version>${group-authorizer.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.kafka</groupId>
-                    <artifactId>kafka-clients</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.kafka</groupId>
-                    <artifactId>kafka_2.12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>jackson-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>jackson-databind</artifactId>
-                </exclusion>
-            </exclusions>
-         </dependency>
         <!-- Kafka Quotas Plugin -->
         <dependency>
             <groupId>io.strimzi</groupId>
