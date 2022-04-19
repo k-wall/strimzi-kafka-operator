@@ -45,7 +45,7 @@ if [ ${STRATEGY} == "acceptance"  ] ;  then
   mvn clean verify -am -Pall -pl systemtest -Dfailsafe.rerunFailingTestsCount=2 -DfailIfNoTests=false \
                    -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
                    -Dgroups=acceptance \
-                   -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade,cruisecontrol
+                   -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade
   exit $?
 fi
 
@@ -56,7 +56,7 @@ if [ ${STRATEGY} == "regression"  ] ;  then
   mvn clean verify -am -Pall -pl systemtest -Dfailsafe.rerunFailingTestsCount=2 -DfailIfNoTests=false \
                    -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
                    -Dgroups=regression \
-                   -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade,cruisecontrol,helm
+                   -DexcludedGroups=loadbalancer,nodeport,bridge,connectcomponents,mirrormaker,upgrade,helm
   exit $?
 fi
 
